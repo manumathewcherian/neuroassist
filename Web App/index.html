@@ -1,0 +1,112 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="brain.png" type="image/icon type">
+</head>
+<body>
+  <div id="login_div" class="main-div">
+    <h3>Neuroassist Login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <div class="row">
+      <div class="column">
+        <h3>Connection Status : <strong id="connection"></strong></h3>
+      </div>
+      </div>
+    <div class="row">
+      <div class="column">
+        <h4>Serial No : <strong id="serialno"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Signal Level : <strong id="signallevel"></strong></h4>
+      </div>
+      <div class="column">
+        <h4>Raw EEG : <strong id="raweeg"></strong></h4>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="column" >
+        <h4>Attention : <strong id="attention"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Meditation : <strong id="meditation"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Delta : <strong id="delta"></strong></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" >
+        <h4>Theta : <strong id="theta"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Low Alpha : <strong id="lowalpha"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>High Alpha : <strong id="highalpha"></strong></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" >
+        <h4>Low Beta : <strong id="lowbeta"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>High Beta : <strong id="highbeta"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Low Gamma : <strong id="lowgamma"></strong></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" >
+        <h4>High Gamma : <strong id="highgamma"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Blink Strength : <strong id="blinkstrength"></strong></h4>
+      </div>
+      <div class="column" >
+        <h4>Executed Action : <strong id="executedaction"></strong></h4>
+      </div>
+    </div>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.2/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+    apiKey: "hidden",
+    authDomain: "neuroassist-23936.firebaseapp.com",
+    databaseURL: "https://neuroassist-23936.firebaseio.com",
+    projectId: "neuroassist-23936",
+    storageBucket: "neuroassist-23936.appspot.com",
+    messagingSenderId: "hidden",
+    appId: "1:hidden",
+    measurementId: "hidden"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="index.js"></script>
+  <script src="view.js"></script>
+
+</body>
+</html>
